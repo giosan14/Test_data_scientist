@@ -1,0 +1,36 @@
+    Carga de Datos:
+        Primero, cargamos el DataFrame original usando load_data(), y decidí eliminar la primera columna, ya que no aporta información relevante para mi análisis.
+
+    Renombrar Columnas:
+        Decidí darle nombres más claros y amigables a las columnas del DataFrame, simplemente para que sea más fácil entender qué representa cada una.
+
+    Manipulación de Fechas:
+        Separé la columna 'Date_Added' en tres nuevas columnas: 'Month_Added', 'Day_Added', y 'Year_Added'. Esto facilita el análisis temporal y permite trabajar con estas 
+        fechas de manera más eficiente, cambiandolo a formato numérico para su posterior análisis.
+
+    Procesamiento de la Columna 'Category':
+        Dividí la columna 'Category' en tres nuevas columnas: 'Category_1', 'Category_2', y 'Category_3'. Además, reemplacé los valores 'None' con "False" para evitar problemas. 
+        Esta decisión la tomé pensando en que podría obtener más información detallada si quisiera profundizar en las categorías, pero esto es opcional.
+
+    Reorganización de Columnas:
+        Organicé las columnas del DataFrame de acuerdo a mi preferencia visual. Esto no afecta los datos, pero hace que la información sea más fácil de leer.
+
+    Eliminación de Duplicados:
+        Finalmente, eliminé duplicados usando drop_duplicates() para asegurarme de tener datos únicos en mi DataFrame procesado.
+
+Análisis de los Datos Obtenidos:
+
+    Verificación de Duplicados:
+        Al revisar los dos DataFrames, noté que el DataFrame original tiene algunas filas duplicadas, mientras que el DataFrame procesado no tiene ninguna.
+
+    Top 40 de Valores Más Repetidos:
+        Para tener una vista rápida, revisé los 40 valores más repetidos en varias columnas. Esto me ayudará a identificar patrones y decidir qué hacer con esos valores 
+        en caso de que no aporten información relevante.
+
+    Verificación de la Cantidad de 'Not Given':
+        Investigando la presencia de 'Not Given' en las columnas 'Director' y 'Country', noté que representan un 29% de los datos totales. 
+        Decidí mantenerlos tal como están, ya que perdería mucha información si los eliminara. 
+        Menciono la posibilidad de obtener estos datos faltantes a través de una API como IMDb, para que no haya faltantes de los datos.
+
+    Información del DataFrame Original y a Procesar:
+        Proporcioné información general sobre ambos DataFrames, destacando nombres de columnas, cantidad de valores no nulos y tipos de datos para facilitar su comprensión.
